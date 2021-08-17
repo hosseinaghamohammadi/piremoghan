@@ -132,12 +132,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 ####################################################
 
 AUTH_USER_MODEL = 'blog.Person'
-# LOGIN_URL = 'http://localhost:8000/'
-# REDIRECT_FIELD_NAME = ''
+LOGIN_URL = 'http://localhost:8000/'
+REDIRECT_FIELD_NAME = ''
 
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# EMAIL_HOST = "smtp.gmail.com"
-# EMAIL_USE_TLS = True
-# EMAIL_PORT = 587
-# EMAIL_HOST_USER = "ceblog.ask@gmail.com"
-# EMAIL_HOST_PASSWORD = "ffsdfbslkvzgvqnc"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_USE_TLS = True
+EMAIL_PORT = 587
+EMAIL_HOST_USER = "ceblog.ask@gmail.com"
+EMAIL_HOST_PASSWORD = "ffsdfbslkvzgvqnc"

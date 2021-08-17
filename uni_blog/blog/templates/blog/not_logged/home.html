@@ -1,0 +1,74 @@
+{% load static %}
+{% load rest_framework %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link rel="stylesheet" href="{% static 'not_logged/home.css' %}">
+	<title>تارنگار دانشجویی</title>
+</head>
+
+<body>
+
+	<nav class="navbar navbar-expand-lg navbar-light bg-light" dir="rtl">
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+			aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+			<a class="navbar-brand" href="#">تارنگار دانشجویی</a>
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">یک<span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">دو</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">سه</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div id="box" class="row container mx-auto">
+		<form action="" method="POST" class="my-auto mx-auto">
+				{% csrf_token %}
+				{% render_form form1 %}
+			<input type="submit" value="Save">
+		</form>
+	</div>
+	
+	{% debug %}
+	<!-- <nav class="navbar navbar-light">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="google.com">ثبت نام</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="google.com">ورود</a>
+            </li>
+        </ul>
+    </nav> -->
+
+
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://cdn.rtlcss.com/bootstrap/v4.0.0/js/bootstrap.min.js"
+		integrity="sha384-54+cucJ4QbVb99v8dcttx/0JRx4FHMmhOWi4W+xrXpKcsKQodCBwAvu3xxkZAwsH"
+		crossorigin="anonymous"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+</body>
+
+</html>

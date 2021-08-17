@@ -1,0 +1,13 @@
+#box{
+    /* background-color: black; */
+    height: 600px;
+    width: 700px;
+    padding-top: 120px;
+    padding-bottom: 50px;
+}
+div > form{
+    width: 90%;
+    height: 80%;
+    background-color: antiquewhite;
+}
+

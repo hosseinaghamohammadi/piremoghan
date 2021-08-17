@@ -39,12 +39,12 @@ class Person(AbstractUser):
     def __str__(self):
         return self.first_name + " " + self.last_name
 
-# class Article(models.Model):
-#     STATUS = (("DRAFT", "Draft"), ("PUBLISHED", "Published"))
+class Article(models.Model):
+    STATUS = (("DRAFT", "Draft"), ("PUBLISHED", "Published"))
 
-#     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
-#     title = models.TextField(max_length=80, null=True, blank=True)
-#     text = models.TextField(blank=True)
+    author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE, null=True)
+    title = models.TextField(max_length=80, null=True, blank=True)
+    text = models.TextField(blank=True)
 #     tag = models.ManyToManyField(Tag, null=True, blank=True)
 
 #     status = models.CharField(default="DRAFT", choices=STATUS, max_length=10, blank=True, null=True)

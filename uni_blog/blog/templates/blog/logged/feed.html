@@ -1,0 +1,134 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.0.0/css/bootstrap.min.css" integrity="sha384-P4uhUIGk/q1gaD/NdgkBIl3a6QywJjlsFJFk7SPRdruoGddvRVSwv5qFnvZ73cpz" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- <link rel="canonical" href="https://getbootstrap.com/docs/4.0/components/dropdowns/"> -->
+
+    <link rel="stylesheet" href="{% static 'logged/home.css' %}">
+
+    <script src="https://cdn.tiny.cloud/1/d16n6hlk9k8icfy8s1avjawsjwvwg21ebyflmoev2cxw397c/tinymce/5/tinymce.min.js"
+        referrerpolicy="origin"></script>
+    <script>
+        tinymce.init({
+            selector: '#mytextarea'
+        });
+    </script>
+    <title>تارنگار دانشجویی</title>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" dir="rtl">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="#">تارنگار دانشجویی</a>
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">یک<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">دو</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/logout">سه</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container-fluid d-flex">
+        <div id="box" class="">
+            <h1>TinyMCE Quick Start Guide</h1>
+            <form method="post">
+                <textarea id="mytextarea" name="mytextarea">
+                Hello, World!
+                </textarea>
+            </form>
+        </div>
+        <div id="right-sidebar" class="d-flex align-items-start">
+            <div class="text-right">
+                <label id="search-label">جست‌وجو</label>
+                <div id="accordion">
+                    <button class="btn" data-toggle="collapse" data-target="#dates" aria-controls="dates">
+                        ماه‌های امسال
+                        &#9660;
+                    </button>
+                    <div id="dates" class="collapse" data-parent="#accordion">
+                        <ul>
+                            <li>
+
+                            </li>
+                            <li>
+
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="btn" data-toggle="collapse" data-target="#tags" aria-controls="tags">
+                        برچسب‌ها
+                        &#9660;
+                    </button>
+                    <div id="tags" class="collapse" data-parent="#accordion">
+                        <ul>
+                            <li>
+                                علی
+                            </li>
+                            <li>
+                                ممد
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="article-display" style="width: 400px; height: 300px; background-color: coral; display: block;">
+            {{article |safe}}
+        </div>
+    </div>
+
+
+
+    <!-- <script type="text/javascript" src="/tiny_mce/tiny_mce.js"></script> -->
+    <!-- <script type="text/javascript">
+        // tinyMCE.init({
+        //     mode: "textareas",
+        //     theme: "advanced"
+        // });
+
+        function ajaxLoad() {
+            var ed = tinyMCE.get('content');
+
+            // Do you ajax call here, window.setTimeout fakes ajax call
+            ed.setProgressState(1); // Show progress
+            window.setTimeout(function () {
+                ed.setProgressState(0); // Hide progress
+                ed.setContent("{{article}}");
+            }, 1000);
+        }
+
+    </script> -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+</body>
+
+</html>
